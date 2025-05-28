@@ -2,8 +2,12 @@ import type { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
+    path: '/demonstracija',
     component: () => import('pages/QuasarDemonstracija.vue'),
+  },
+  {
+    path: '/reaktivnost',
+    component: () => import('pages/QuasarReaktivnost.vue'),
   },
 
   // Always leave this as last one,
@@ -11,10 +15,6 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),
-  },
-  {
-    path: '/demonstracija',
-    component: () => import('pages/QuasarDemonstracija.vue'),
   },
 ];
 

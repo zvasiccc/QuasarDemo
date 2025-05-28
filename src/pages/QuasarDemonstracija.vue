@@ -3,49 +3,33 @@
     <div class="text-h5">Demonstracija Quasara</div>
   </q-banner>
 
-  <!-- QBtn -->
-  <q-card class="q-mb-md">
-    <q-card-section>
-      <div class="text-h6">1. Dugme (QBtn)</div>
-      <q-btn color="primary" label="Klikni me" @click="prikaziNotifikaciju" />
-    </q-card-section>
-  </q-card>
+  <q-btn color="primary" label="Prikazi notifikaciju" @click="prikaziNotifikaciju" />
+  <q-btn class="q-ml-xl q-mr-xl" label="Prikaži dijalog" color="secondary" @click="pokaziDijalog = true" />
+  <q-btn label="Prikazi loader" color="primary" icon="hourglass_top" @click="prikaziLoader" />
 
   <!-- QInput -->
-  <q-card class="q-mb-md">
-    <q-card-section>
+  <q-card>
+    <q-card-section class="q-mt-xl">
       <div class="text-h6">2. Forma sa validacijom (QInput)</div>
-      <q-input
-        filled
-        v-model="ime"
-        label="Unesi ime"
-        :rules="[(val) => !!val || 'Obavezno polje']"
-      />
+      <q-input filled v-model="ime" label="Unesi ime" :rules="[(val) => !!val || 'Obavezno polje']" />
       <q-input filled v-model="lozinka" label="Unesi lozinku" type="password" class="q-mt-sm" />
       <q-btn label="Prijavi se" color="positive" class="q-mt-md" @click="posaljiFormu" />
     </q-card-section>
   </q-card>
 
-  <!-- QTable -->
 
-  <!-- QDialog -->
-  <q-card class="q-mb-md">
-    <q-card-section>
-      <div class="text-h6">4. Dijalog (QDialog)</div>
-      <q-btn label="Prikaži dijalog" color="secondary" @click="pokaziDijalog = true" />
-      <q-dialog v-model="pokaziDijalog">
-        <q-card>
-          <q-card-section>
-            <div class="text-h6">Ovo je dijalog!</div>
-            <p>Brzo napravljen bez dodatnih biblioteka.</p>
-          </q-card-section>
-          <q-card-actions align="right">
-            <q-btn flat label="Zatvori" color="primary" v-close-popup />
-          </q-card-actions>
-        </q-card>
-      </q-dialog>
-    </q-card-section>
-  </q-card>
+  <q-dialog v-model="pokaziDijalog">
+    <q-card>
+      <q-card-section>
+        <div class="text-h6">Ovo je moj dijalog</div>
+        <p>Dodatne informacije o dijalogu</p>
+      </q-card-section>
+      <q-card-actions align="right">
+        <q-btn flat label="Zatvori" color="primary" v-close-popup />
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
+
 </template>
 
 <script setup lang="ts">
@@ -79,6 +63,17 @@ const korisnici = [
   { ime: 'Marko', uloga: 'Korisnik' },
   { ime: 'Jelena', uloga: 'Moderator' },
 ];
+
+const prikaziLoader = () => {
+  $q.loading.show({
+    message: 'Učitavanje...',
+    spinnerColor: 'white',
+    spinnerSize: 140
+  })
+  setTimeout(() => {
+    $q.loading.hide()
+  }, 2000)
+}
 </script>
 
 <style scoped>
