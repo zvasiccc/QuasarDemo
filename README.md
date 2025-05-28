@@ -1,6 +1,6 @@
 # Demonstracija Quasar Frameworka
 
-1. Uvod[#uvod]
+[Uvod][#uvod]
 
-##Uvod
+## Uvod
 Ovo je uvod
