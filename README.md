@@ -4,9 +4,9 @@
 - [Instalacija i pokretanje](#instalacija-i-pokretanje)
 - [Uvod u Quasar i njegove prednosti](#uvod-u-quasar-i-njegove-prednosti)
 - [Komponente specificne za Quasar](#komponente-specificne-za-quasar)
- - [QBtn](#qbtn)
- - [QInput](#qinput)
- - [QDialog](#qdialog)
+  - [QBtn](#qbtn)
+  - [QInput](#qinput)
+  - [QDialog](#qdialog)
 
 
 
