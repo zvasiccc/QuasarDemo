@@ -9,13 +9,19 @@ const routes: RouteRecordRaw[] = [
     path: '/reaktivnost',
     component: () => import('pages/QuasarReaktivnost.vue'),
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
   {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
+    path: '/qbtn',
+    component: ()=>import('pages/QBtnDemo.vue')
   },
+  {
+    path: '/qinput',
+    component: ()=>import('pages/QInputDemo.vue')
+  },
+  {
+    path: '/qdialog',
+    component: ()=>import('pages/QDialogDemo.vue')
+  },
+
 ];
 
 export default routes;
