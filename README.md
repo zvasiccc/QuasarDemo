@@ -74,7 +74,7 @@ Primer stilizovanja Quasar dugmeta bez css-a:
     unelevated - dugme izgleda kao deo povrsine, i nece imati efekat podizanja sa povrsine tj 3D efekat
     ripple - na klik se iz dugmeta pojavljuje "talas" koji se siri iz sredine dugmeta
 
-    ![alt text](images/Settings_button.png)
+    ![alt text](//images/Settings_button.png)
 
 ### QInput
 
