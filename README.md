@@ -75,6 +75,7 @@ Primer stilizovanja Quasar dugmeta bez css-a:
     ripple - na klik se iz dugmeta pojavljuje "talas" koji se siri iz sredine dugmeta
 
     ![settings-button](./images/settings-button.png)
+    ![settins-button](image.png)
 
 ### QInput
 
