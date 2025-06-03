@@ -12,9 +12,16 @@
 
         <q-btn label="Loading dugme" color="secondary" :loading="dugmeUCekanju" @click="pokreniLoading" />
 
+        <q-btn label="Preuzimanje" icon="cloud_download" :percentage="progress" :loading="preuzimanjeUToku"
+            color="primary" @click="pokreniPreuzimanje" />
+
         <q-btn label="Veliko dugme" size="32px" color="secondary" outline
             @click="pokaziPoruku('Kliknuto veliko dugme')" />
         <q-btn label="Izolovano" class="q-ma-xl" color="primary" @click="pokaziPoruku('Kliknuto izolovano dugme')" />
+
+        <q-btn label="Settings" icon-right="build" color="purple" text-color="red" outline rounded unelevated ripple
+            size="lg" @click="handleClick()" />
+
     </div>
 </template>
 
@@ -24,8 +31,23 @@ import { useQuasar } from 'quasar'
 
 const $q = useQuasar()
 const dugmeUCekanju = ref(false)
+const preuzimanjeUToku = ref(false);
+const progress = ref(0);
+const pokreniPreuzimanje = () => {
 
-function pokaziPoruku(poruka) {
+    preuzimanjeUToku.value = true;
+
+    const interval = setInterval(() => {
+        if (progress.value < 100) {
+            progress.value += 5;
+        } else {
+            clearInterval(interval);
+            preuzimanjeUToku.value = false;
+        }
+    }, 500);
+}
+
+const pokaziPoruku = (poruka) => {
     $q.notify({
         type: 'info',
         message: poruka
