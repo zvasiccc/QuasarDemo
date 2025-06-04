@@ -37,10 +37,10 @@ Takodje je moguce napraviti zajednicke komponente koje se mogu koristi u drugim 
 Quasar koristi fajl "routes.ts" za podesavanje rutiranja, sto znaci da je vrlo fleksibilno zato sto programer sam bira naziv url rute i koja ce se komponenta prikazati sto omogucava potpunu kontrolu nad rutama. 
 
 Quasar je jedan od najbrzih i efikasnijih frontend frameworka zahvaljujuci raznim tehnikama za optimizaciju prilikom buildovanja aplikacije:
--Dinamicko ucitavanje komponenti - komponente se ucitavaju samo kada su stvarno potrebne (lazy loading)
--Razbija kod u manje delove (code splitting)
--Iz koda se automatski izbacuju delove koji se ne koriste (tree shaking)
--Radi se kompresija statickih fajlova i uklanjanje nepotrebnog koda iz js i css fajlova(manje podataka za prenos znaci brzi prenos)
+- Dinamicko ucitavanje komponenti - komponente se ucitavaju samo kada su stvarno potrebne (lazy loading)
+- Razbija kod u manje delove (code splitting)
+- Iz koda se automatski izbacuju delove koji se ne koriste (tree shaking)
+- Radi se kompresija statickih fajlova i uklanjanje nepotrebnog koda iz js i css fajlova(manje podataka za prenos znaci brzi prenos)
 
 ## Stilizovanje u Quasaru
 Komponente u Quasaru dolaze sa bogatom podrskom za animacije i dizajn bez dodatnog css-a.
