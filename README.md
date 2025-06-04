@@ -5,7 +5,7 @@
 - [Uvod u Quasar i njegove prednosti](#uvod-u-quasar-i-njegove-prednosti)
 - [Stilizovanje u quasaru](#stilizovanje-u-quasaru)
 - [Komponente specificne za Quasar](#komponente-specificne-za-quasar)
-- [QBtn](#qbtn)
+- [QButton](#qbutton)
 - [QInput](#qinput)
 - [QDialog](#qdialog)
 
@@ -64,12 +64,13 @@ Primer stilizovanja Quasar komponente bez css-a:
 
 ## Komponente specificne za Quasar
 
-### QBtn
+### QButton
 
-Za izradu dugmadi se koristi ugradjena komponente <q-btn> koja nudi dodatne mogucnosti i podesavanja u odnosu na standardne komponentedugme. Omogucava jednostavnu integraciju sa ikonama, rad sa konturama, oblicima, i jednostavno podesavanje razlicitih stilova dugmeta.              
+Za izradu dugmadi se koristi ugradjena komponenta <q-btn> koja nudi dodatne mogucnosti i podesavanja u odnosu na standardne komponente. Omogucava jednostavnu integraciju sa ikonama, rad sa konturama, oblicima, i jednostavno podesavanje razlicitih stilova dugmeta.              
 
 Primer quasar dugmeta sa atributima specificnim za Quasar: 
-    <q-btn label="Settings" icon-right="build" color="purple" text-color="red" outline rounded unelevated ripple size="lg" @click="handleClick()" />
+    <q-btn label="Settings" icon-right="build" color="purple" text-color="red" 
+    outline rounded  unelevated ripple size="lg" @click="handleClick()" />
 
 icon-right="build" - ikona se nalazi na desnoj strani dugmeta i naziv ikone je build (alat)
 outline - dugme nije celo obojeno u ljubicasto (zato sto je color="purple") nego ce samo njegove ivice biti ljubicaste, dok ce tekst unutardugmeta biti crven (zato sto je text-color="red") 
@@ -86,19 +87,19 @@ radi boljeg korisnickog iskustva.
 
 Karakteristike QInput komponente:
 
--Podrzava razne tipove polja kao sto su text, number, email, password i textarea(viselinijski unos texta). Koriscenjem jednog od ovih 
+- Podrzava razne tipove polja kao sto su text, number, email, password i textarea(viselinijski unos texta). Koriscenjem jednog od ovih 
 parametara se moze definisati ponasanje polja kao i njegova vizuelna reprezentacija.
--Ima ugradjenu validaciju kroz atribut "rules". Rules sintaksa se sastoji od 2 dela. U prvom delu se nalazi niz uslova koje korisnicki unos 
+- Ima ugradjenu validaciju kroz atribut "rules". Rules sintaksa se sastoji od 2 dela. U prvom delu se nalazi niz uslova koje korisnicki unos 
 mora da zadovolji da bi se smatrao validnim, a u drugom delu se nalazi poruka koja se ispisuje ukoliko uslovi nisu zadovoljeni.
 Jedna od cescih primena je kod polja koja zahtevaju obavezni unos: 
     :rules="[val => val && val.length > 0 || 'Polje je obavezno']"
--Prepend-icon(s leve strane) i append-icon(s desne strane) se lako mogu koristiti ikonice za vizuelnu pomoc korisniku ali i za
+- Prepend-icon(s leve strane) i append-icon(s desne strane) se lako mogu koristiti ikonice za vizuelnu pomoc korisniku ali i za
 neke funkcionalnosti u input polju, na primer ciscenje unosa ili prikazivanje/sakrivanje lozinke.
--Quasar omogucava prikaz dodatnih infomacija korisniku koje se prikazuju ispod input polja, preko atributa "hint" ili "error message".
--Mask se koisti za unose koji zahtevaju tacno odredjen format, kao sto su datumi i brojevi telefona.
+- Quasar omogucava prikaz dodatnih infomacija korisniku koje se prikazuju ispod input polja, preko atributa "hint" ili "error message".
+- Mask se koisti za unose koji zahtevaju tacno odredjen format, kao sto su datumi i brojevi telefona.
     <q-input mask="###-###" />
 Korisnik u ovom inputu moze da unosi samo brojeve(# dozvoljava samo cifru 0-9) i oni ce se automatski unositi u formatu 000-000
--Postoje i ugradjeni dogadjaji koji mogu da se "hvataju" i kada se desi odredjeni dogadjaj u QInputu da se poziva odredjena funkcija:
+- Postoje i ugradjeni dogadjaji koji mogu da se "hvataju" i kada se desi odredjeni dogadjaj u QInputu da se poziva odredjena funkcija:
 @input - svaki put kada korisnik unese nesto u input polje
 @focus - kada korisnik fokusira polje
 @blur - kada korisnik vise nije fokusiran na polje

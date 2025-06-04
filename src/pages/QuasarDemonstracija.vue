@@ -11,7 +11,9 @@
   <q-card>
     <q-card-section class="q-mt-xl">
       <div class="text-h6">2. Forma sa validacijom (QInput)</div>
-      <q-input filled v-model="ime" label="Unesi ime" :rules="[(val) => !!val || 'Obavezno polje']" />
+
+      <q-input filled v-model="ime" label="Unesi ime" :rules="[val => val && val.length > 0 || 'Polje je obavezno']" />
+
       <q-input filled v-model="lozinka" label="Unesi lozinku" type="password" class="q-mt-sm" />
       <q-btn label="Prijavi se" color="positive" class="q-mt-md" @click="posaljiFormu" />
     </q-card-section>
