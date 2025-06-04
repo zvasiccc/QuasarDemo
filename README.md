@@ -77,6 +77,7 @@ Primer stilizovanja Quasar dugmeta bez css-a:
     ![settings-button](./images/settings-button.png)
     ![settings-button](/images/settings-button.png)
     ![settings-button](./images/settings-button.png)
+    ![settings-button](https://github.com/zvasiccc/QuasarDemo/blob/main/images/settings-button.png)
 
 ### QInput
 
