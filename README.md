@@ -36,7 +36,7 @@ Komponente se jednostavno prave, sto znaci da je moguce praviti dosta manjih kom
 Takodje je moguce napraviti zajednicke komponente koje se mogu koristi u drugim quasar projektima. To je moguce i Vue projektima ali quasar nudi boot fajlove za automatsku inicijalizaciju, ugradjene alate i podesavanja za distribuciju komponenti kao paketa.
 Quasar koristi fajl "routes.ts" za podesavanje rutiranja, sto znaci da je vrlo fleksibilno zato sto programer sam bira naziv url rute i koja ce se komponenta prikazati sto omogucava potpunu kontrolu nad rutama. 
 
-    Quasar je jedan od najbrzih i efikasnijih frontend frameworka zahvaljujuci raznim tehnikama za optimizaciju prilikom buildovanja aplikacije:
+Quasar je jedan od najbrzih i efikasnijih frontend frameworka zahvaljujuci raznim tehnikama za optimizaciju prilikom buildovanja aplikacije:
 -Dinamicko ucitavanje komponenti - komponente se ucitavaju samo kada su stvarno potrebne (lazy loading)
 -Razbija kod u manje delove (code splitting)
 -Iz koda se automatski izbacuju delove koji se ne koriste (tree shaking)
@@ -51,12 +51,15 @@ Quasar koristi fajl "routes.ts" za podesavanje rutiranja, sto znaci da je vrlo f
 
 Isti principi vaze ako se umesto margine podesava pading(p).
 
-Boje mogu da se uzimaju iz Quasar palete koja pruza najcesce koriscene boje kao sto su na primer "positive" (prepoznatljiva zelena nijansa) 
+    Boje mogu da se uzimaju iz Quasar palete koja pruza najcesce koriscene boje kao sto su na primer "positive" (prepoznatljiva zelena nijansa) 
 "negative" (prepoznatljiva crvena nijasna), "info", "warning" ... 
 Takodje boje mogu da se uzimaju iz Quasar Color liste koja pruza 19 razlicitih boja, od kojih svaka ima 14 nijansi. 
 Na primer "red-2" je crvena boja ali sa vrlo malo zasicenja, dok je "red-14" jarka crvena boja. Isto vazi iz za plavu,zelenu,zutu,narandzastu i sve ostale boje iz liste.
 
-Primer stilizovanja Quasar dugmeta bez css-a:
+    Quasar koristi Material Design Icons, nalaze se na linku https://fonts.google.com/icons. Svaka ikona sadrzi icon-name, i dovoljno je samo 
+upisati ime ikone u quasar komponenti i odgovaraju ikona ce se prikazati unutar komponente.
+
+Primer stilizovanja Quasar komponente bez css-a:
         <q-btn class="q-ma-sm" label="Dodaj" icon="add" color="positive" text-color="deep-purple-8" @click="funkcijaDodaj()" />
 
 ## Komponente specificne za Quasar
@@ -68,18 +71,50 @@ Primer stilizovanja Quasar dugmeta bez css-a:
     Primer quasar dugmeta sa atributima specificnim za Quasar: 
         <q-btn label="Settings" icon-right="build" color="purple" text-color="red" outline rounded unelevated ripple size="lg" @click="handleClick()" />
 
-    icon-right="build" - ikona se nalazi na desnoj strani dugmeta i naziv ikone je build (alat)
-    outline - dugme nije celo obojeno u ljubicasto (zato sto je color="purple") nego ce samo njegove ivice biti ljubicaste, dok ce tekst unutar dugmeta biti crven (zato sto je text-color="red") 
-    rounded - dugme je zaokrugljeno 
-    unelevated - dugme izgleda kao deo povrsine, i nece imati efekat podizanja sa povrsine tj 3D efekat
-    ripple - na klik se iz dugmeta pojavljuje "talas" koji se siri iz sredine dugmeta
+icon-right="build" - ikona se nalazi na desnoj strani dugmeta i naziv ikone je build (alat)
+outline - dugme nije celo obojeno u ljubicasto (zato sto je color="purple") nego ce samo njegove ivice biti ljubicaste, dok ce tekst unutardugmeta biti crven (zato sto je text-color="red") 
+rounded - dugme je zaokrugljeno 
+unelevated - dugme izgleda kao deo povrsine, i nece imati efekat podizanja sa povrsine tj 3D efekat
+ripple - na klik se iz dugmeta pojavljuje "talas" koji se siri iz sredine dugmeta
 
 ![settings-button](./images/settings-button.png)
-![settings-button](/images/settings-button.png)
-![settings-button](./images/settings-button.png)
-![settings-button](https://github.com/zvasiccc/QuasarDemo/blob/main/images/settings-button.png)
 
 ### QInput
 
+    <q-input> je Quasar input komponenta. To je prosirena verzija standardnog input elementam sa dodatnim funkcionalnostima i vizuelnim efektima
+radi boljeg korisnickog iskustva. 
+
+    Karakteristike QInput komponente:
+
+    -Podrzava razne tipove polja kao sto su text, number, email, password i textarea(viselinijski unos texta). Koriscenjem jednog od ovih 
+parametara se moze definisati ponasanje polja kao i njegova vizuelna reprezentacija.
+    -Ima ugradjenu validaciju kroz atribut "rules". Rules sintaksa se sastoji od 2 dela. U prvom delu se nalazi niz uslova koje korisnicki unos 
+mora da zadovolji da bi se smatrao validnim, a u drugom delu se nalazi poruka koja se ispisuje ukoliko uslovi nisu zadovoljeni.
+Jedna od cescih primena je kod polja koja zahtevaju obavezni unos: 
+        :rules="[val => val && val.length > 0 || 'Polje je obavezno']"
+    -Prepend-icon(s leve strane) i append-icon(s desne strane) se lako mogu koristiti ikonice za vizuelnu pomoc korisniku ali i za
+neke funkcionalnosti u input polju, na primer ciscenje unosa ili prikazivanje/sakrivanje lozinke.
+    -Quasar omogucava prikaz dodatnih infomacija korisniku koje se prikazuju ispod input polja, preko atributa "hint" ili "error message".
+    -Mask se koisti za unose koji zahtevaju tacno odredjen format, kao sto su datumi i brojevi telefona.
+        <q-input mask="###-###" />
+ Korisnik u ovom inputu moze da unosi samo brojeve(# dozvoljava samo cifru 0-9) i oni ce se automatski unositi u formatu 000-000
+    -Postoje i ugradjeni dogadjaji koji mogu da se "hvataju" i kada se desi odredjeni dogadjaj u QInputu da se poziva odredjena funkcija:
+@input - svaki put kada korisnik unese nesto u input polje
+@focus - kada korisnik fokusira polje
+@blur - kada korisnik vise nije fokusiran na polje
+
 ### QDialog
+
+    QDialog je Quasar komponenta namenjena za dijaloga, upozorenja ili bilo kog sadrzaja u iskacucem prozoru(pop-up).
+Dijalog u Quasaru se moze koristiti na 2 nacina, prvi je koriscenjem <q-dialog> komponente a drugi je pozivanjem dijaloga iz Quasar API-ja pomocu $q.dialog()
+    <q-dialog> je vrlo fleksibilan sto se tice sadrzaja, moze sadrzati cele strane, sa kompleksnim html-om i javascript-om. Moze sadrzati druge 
+qusar komponente, padajuce menije, tabele, liste...
+Zbog ugradjenih karakteristika olaksava rad sa podacima programeru, a korisnik moze da interaguje sa tim prozorom bez napustanja trenutne stranice cime se poboljsava korisnicko iskustvo.
+Atribut "persistent" znaci da se dijalog ne zatvara klikom van dijaloga vec iskljucivo preko dugmeta predvidjenog za to.
+Moguce je postaviti automatski fokus na prvi input u dijalogu pomocu metode .focus() sto moze biti korisno prilikom popunjavanja raznih vrsta   formulara. 
+    Quasar dijalog je povezan dvosmerno preko v-modela sa odredjenom boolean promenljivom, promenlijva se obicno dinamicki postavlja na true, i 
+tada se otvara dijalog, a prilikom zatvaranja dijaloga se ta promenljiva postavlja na false. 
+Postoji i direktiva v-close-popup koji umesto programera vodi racuna o zatvaranju i tada nema potrebe za postavljanjem promenljive na false, o tome vodi racuna Quasar. 
+Dijalog moze emitovati rezultate korisnickih akcija(npr. korisnikov klik na "OK" ili "Cancel") i omogucava programsku obradu pomocu .onOk(), 
+.onCancel() i .onDismiss() metoda.
 

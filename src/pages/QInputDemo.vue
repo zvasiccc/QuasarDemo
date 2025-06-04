@@ -15,6 +15,7 @@
         <q-input filled v-model.number="godine" type="number" label="Godine"
             :rules="[val => val >= 0 || 'Godine ne mogu biti negativne']" />
 
+        <q-input mask="###-###" hint="Molimo Vas unesite broj u formatu 000-000" />
     </div>
 </template>
 
