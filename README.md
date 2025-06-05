@@ -31,7 +31,7 @@ Koristi se za izradu single page aplikacija i korisnickih interfejsa.
 Glavna prednost Quasara je sto ima dosta ugradjenih gotovih komponenti spremnih za koriscenje, kao sto su dugmici, inputi, notifikacije,
 dijalozi. Ove nadogradnje umnogome olaksavaju i ubrzavaju rad.
 Vrlo je lak za ucenje, koristi SFC(single file component) pristup sto znaci da jedan fajl sadrzi i html i css i skriptu(logiku).
-Quasar ima veoma dobro organizovanu arhitekturu koju mozemo menjati prema nasim potrebama.
+Projekat ima arhitekturu koju mozemo menjati prema nasim potrebama.
 Komponente se jednostavno prave, sto znaci da je moguce praviti dosta manjih komponenti koje ce se kasnije iskoristiti, time se sprecava ponavljanje koda, i povecava code reusability.
 Takodje je moguce napraviti zajednicke komponente koje se mogu koristi u drugim quasar projektima. To je moguce i Vue projektima ali quasar nudi boot fajlove za automatsku inicijalizaciju, ugradjene alate i podesavanja za distribuciju komponenti kao paketa.
 Quasar koristi fajl "routes.ts" za podesavanje rutiranja, sto znaci da je vrlo fleksibilno zato sto programer sam bira naziv url rute i koja ce se komponenta prikazati sto omogucava potpunu kontrolu nad rutama. 
@@ -46,7 +46,7 @@ Quasar je jedan od najbrzih i efikasnijih frontend frameworka zahvaljujuci razni
 Komponente u Quasaru dolaze sa bogatom podrskom za animacije i dizajn bez dodatnog css-a.
 Ukoliko nekoj quasar komponenti dodamo na primer atribut class="q-ma-sm" to bi znacilo:
 - "q" je prefiks koji nam govori da se radi o ugradjenoj quasar klasi,
-- "ma" deo je skracenica od Margin(m) i All(a). Sto znaci dodaje se margina na sve 4 strane u odnosu na dugme. Oznaka na primer "ml" bi znacila da se dodaje margina samo na levoj strani dugmeta. 
+- "ma" deo je skracenica od Margin(m) i All(a). Sto znaci dodaje se margina na sve 4 strane u odnosu na dugme. Oznaka na primer "ml" bi znacila da se dodaje margina samo na levoj strani komponente. 
 - "sm" je velicina margine, skracenica od small. Velicine idu postupno od extra small(xs) do extra large(xl). 
 
 Isti principi vaze ako se umesto margine podesava pading(p).
@@ -57,13 +57,14 @@ Takodje boje mogu da se uzimaju iz Quasar Color liste koja pruza 19 razlicitih b
 Na primer "red-2" je crvena boja ali sa vrlo malo zasicenja, dok je "red-14" jarka crvena boja. Isto vazi iz za plavu,zelenu,zutu,narandzastu i sve ostale boje iz liste.
 
 Postoje atributi za:
-- pozadinu (class="bg-zeljenaBoja") 
-- boju teksta(class="text-zeljenaBoja")
+- boju pozadine i boju teksta (class="bg-blue text-black ") 
 - debljinu i velicinu fonta(class="text-weight-thin")
-
+- poravnanje, velicina i stil teksta ( class="text-bold text-left") 
+- flexbox i layout ( row, column, justify-center, no-wrap...)
+- border 
 
 Quasar koristi Material Design Icons, nalaze se na linku https://fonts.google.com/icons. Svaka ikona sadrzi icon-name, i dovoljno je samo 
-upisati ime ikone u quasar komponenti i odgovaraju ikona ce se prikazati unutar komponente.
+upisati ime zeljene ikone u quasar komponenti i odgovaraju ikona ce se prikazati unutar komponente.
 
 Primer stilizovanja Quasar komponente bez css-a:
     <q-btn class="q-ma-sm" label="Dodaj" icon="add" color="positive" text-color="deep-purple-8" @click="funkcijaDodaj()" />
@@ -112,7 +113,7 @@ Korisnik u ovom inputu moze da unosi samo brojeve(# dozvoljava samo cifru 0-9) i
 
 ### QDialog
 
-QDialog je Quasar komponenta namenjena za dijaloga, upozorenja ili bilo kog sadrzaja u iskacucem prozoru(pop-up).
+QDialog je Quasar komponenta namenjena za prikaz dijaloga, upozorenja ili bilo kog sadrzaja u iskacucem prozoru(pop-up).
 Dijalog u Quasaru se moze koristiti na 2 nacina, prvi je koriscenjem q-dialog komponente a drugi je pozivanjem dijaloga iz Quasar API-ja pomocu $q.dialog()
 q-dialog je vrlo fleksibilan sto se tice sadrzaja, moze sadrzati cele strane, sa kompleksnim html-om i javascript-om. Moze sadrzati druge 
 qusar komponente, padajuce menije, tabele, liste...

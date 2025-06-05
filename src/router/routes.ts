@@ -2,14 +2,6 @@ import type { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/demonstracija',
-    component: () => import('pages/QuasarDemonstracija.vue'),
-  },
-  {
-    path: '/reaktivnost',
-    component: () => import('pages/QuasarReaktivnost.vue'),
-  },
-  {
     path: '/qbtn',
     component: ()=>import('pages/QBtnDemo.vue')
   },
