@@ -1,7 +1,7 @@
 <template>
 
     <div class="text-h5 text-center text-uppercase q-ma-xl">
-        Stilizacija u quasaru
+        Stilizovanje u quasaru
     </div>
 
     <div class="row q-col-gutter-md">
