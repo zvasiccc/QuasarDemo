@@ -1,4 +1,4 @@
-# Demonstracija Quasar Frameworka
+# Kreiranje korisnickog interfejsa koriscenjem Quasar frameworka
 
 ## Sadržaj
 - [Instalacija i pokretanje](#instalacija-i-pokretanje)
