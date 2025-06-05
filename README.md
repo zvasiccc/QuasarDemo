@@ -82,7 +82,7 @@ ripple - na klik se iz dugmeta pojavljuje "talas" koji se siri iz sredine dugmet
 
 ### QInput
 
-<q-input> je Quasar input komponenta. To je prosirena verzija standardnog input elementam sa dodatnim funkcionalnostima i vizuelnim efektima
+q-input je Quasar input komponenta. To je prosirena verzija standardnog input elementam sa dodatnim funkcionalnostima i vizuelnim efektima
 radi boljeg korisnickog iskustva. 
 
 Karakteristike QInput komponente:
@@ -107,8 +107,8 @@ Korisnik u ovom inputu moze da unosi samo brojeve(# dozvoljava samo cifru 0-9) i
 ### QDialog
 
 QDialog je Quasar komponenta namenjena za dijaloga, upozorenja ili bilo kog sadrzaja u iskacucem prozoru(pop-up).
-Dijalog u Quasaru se moze koristiti na 2 nacina, prvi je koriscenjem <q-dialog> komponente a drugi je pozivanjem dijaloga iz Quasar API-ja pomocu $q.dialog()
-<q-dialog> je vrlo fleksibilan sto se tice sadrzaja, moze sadrzati cele strane, sa kompleksnim html-om i javascript-om. Moze sadrzati druge 
+Dijalog u Quasaru se moze koristiti na 2 nacina, prvi je koriscenjem q-dialog komponente a drugi je pozivanjem dijaloga iz Quasar API-ja pomocu $q.dialog()
+q-dialog je vrlo fleksibilan sto se tice sadrzaja, moze sadrzati cele strane, sa kompleksnim html-om i javascript-om. Moze sadrzati druge 
 qusar komponente, padajuce menije, tabele, liste...
 Zbog ugradjenih karakteristika olaksava rad sa podacima programeru, a korisnik moze da interaguje sa tim prozorom bez napustanja trenutne stranice cime se poboljsava korisnicko iskustvo.
 Atribut "persistent" znaci da se dijalog ne zatvara klikom van dijaloga vec iskljucivo preko dugmeta predvidjenog za to.
