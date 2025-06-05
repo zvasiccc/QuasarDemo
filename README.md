@@ -63,8 +63,7 @@ Postoje atributi za:
 - flexbox i layout ( row, column, justify-center, no-wrap...)
 - border 
 
-Quasar koristi Material Design Icons, nalaze se na linku https://fonts.google.com/icons. Svaka ikona sadrzi icon-name, i dovoljno je samo 
-upisati ime zeljene ikone u quasar komponenti i odgovaraju ikona ce se prikazati unutar komponente.
+Quasar koristi Material Design Icons, nalaze se na linku https://fonts.google.com/icons. Svaka ikona sadrzi icon-name, i dovoljno je samo upisati ime zeljene ikone u quasar komponenti i odgovaraju ikona ce se prikazati unutar komponente.
 
 Primer stilizovanja Quasar komponente bez css-a:
     <q-btn class="q-ma-sm" label="Dodaj" icon="add" color="positive" text-color="deep-purple-8" @click="funkcijaDodaj()" />
@@ -73,7 +72,7 @@ Primer stilizovanja Quasar komponente bez css-a:
 
 ### QButton
 
-Za izradu dugmadi se koristi ugradjena komponenta <q-btn> koja nudi dodatne mogucnosti i podesavanja u odnosu na standardne komponente. Omogucava jednostavnu integraciju sa ikonama, rad sa konturama, oblicima, i jednostavno podesavanje razlicitih stilova dugmeta.              
+Za izradu dugmadi se koristi ugradjena komponenta q-btn koja nudi dodatne mogucnosti i podesavanja u odnosu na standardne komponente. Omogucava jednostavnu integraciju sa ikonama, rad sa konturama, oblicima, i jednostavno podesavanje razlicitih stilova dugmeta.              
 
 Primer quasar dugmeta sa atributima specificnim za Quasar: 
     <q-btn label="Settings" icon-right="build" color="purple" text-color="red" 
