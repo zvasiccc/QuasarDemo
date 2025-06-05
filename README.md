@@ -3,7 +3,7 @@
 ## Sadržaj
 - [Instalacija i pokretanje](#instalacija-i-pokretanje)
 - [Uvod u Quasar i njegove prednosti](#uvod-u-quasar-i-njegove-prednosti)
-- [Stilizovanje u quasaru](#stilizovanje-u-quasaru)
+- [Stilizovanje u Quasaru](#stilizovanje-u-quasaru)
 - [Komponente specificne za Quasar](#komponente-specificne-za-quasar)
 - [QButton](#qbutton)
 - [QInput](#qinput)
@@ -55,6 +55,12 @@ Boje mogu da se uzimaju iz Quasar palete koja pruza najcesce koriscene boje kao 
 "negative" (prepoznatljiva crvena nijasna), "info", "warning" ... 
 Takodje boje mogu da se uzimaju iz Quasar Color liste koja pruza 19 razlicitih boja, od kojih svaka ima 14 nijansi. 
 Na primer "red-2" je crvena boja ali sa vrlo malo zasicenja, dok je "red-14" jarka crvena boja. Isto vazi iz za plavu,zelenu,zutu,narandzastu i sve ostale boje iz liste.
+
+Postoje atributi za:
+- pozadinu (class="bg-zeljenaBoja") 
+- boju teksta(class="text-zeljenaBoja")
+- debljinu i velicinu fonta(class="text-weight-thin")
+
 
 Quasar koristi Material Design Icons, nalaze se na linku https://fonts.google.com/icons. Svaka ikona sadrzi icon-name, i dovoljno je samo 
 upisati ime ikone u quasar komponenti i odgovaraju ikona ce se prikazati unutar komponente.
@@ -110,7 +116,7 @@ QDialog je Quasar komponenta namenjena za dijaloga, upozorenja ili bilo kog sadr
 Dijalog u Quasaru se moze koristiti na 2 nacina, prvi je koriscenjem q-dialog komponente a drugi je pozivanjem dijaloga iz Quasar API-ja pomocu $q.dialog()
 q-dialog je vrlo fleksibilan sto se tice sadrzaja, moze sadrzati cele strane, sa kompleksnim html-om i javascript-om. Moze sadrzati druge 
 qusar komponente, padajuce menije, tabele, liste...
-Zbog ugradjenih karakteristika olaksava rad sa podacima programeru, a korisnik moze da interaguje sa tim prozorom bez napustanja trenutne stranice cime se poboljsava korisnicko iskustvo.
+Zbog ugradjenih atributa olaksava rad sa podacima programeru, a korisnik moze da interaguje sa tim prozorom bez napustanja trenutne stranice cime se poboljsava korisnicko iskustvo.
 Atribut "persistent" znaci da se dijalog ne zatvara klikom van dijaloga vec iskljucivo preko dugmeta predvidjenog za to.
 Moguce je postaviti automatski fokus na prvi input u dijalogu pomocu metode .focus() sto moze biti korisno prilikom popunjavanja raznih vrsta   formulara. 
 Quasar dijalog je povezan dvosmerno preko v-modela sa odredjenom boolean promenljivom, promenlijva se obicno dinamicki postavlja na true, i 

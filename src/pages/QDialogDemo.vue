@@ -1,7 +1,7 @@
 <template>
     <div class="q-pa-md">
         <q-btn label="Prikazi dijalog1" color="primary" @click="otvoriDijalog = true" />
-        <q-btn label="Prikaži dijalog2" color="primary" @click="prikaziDijalogFunkcija" />
+        <q-btn label="Prikazi dijalog2" color="primary" @click="prikaziDijalog2Funkcija" />
         <q-dialog v-model="otvoriDijalog">
             <q-card>
                 <q-card-section>
@@ -36,12 +36,19 @@ function potvrdiAkciju() {
     })
 }
 
-const prikaziDijalogFunkcija = () => {
+const prikaziDijalog2Funkcija = () => {
     $q.dialog({
         title: 'Potvrda',
         message: 'Da li ste sigurni da zelite da nastavite?',
-        cancel: true,
-        persistent: true
+        persistent: true,
+        ok: {
+            label: 'Potvrdi',
+            color: 'positive'
+        },
+        cancel: {
+            label: 'Otkazi',
+            color: 'negative'
+        }
     }).onOk(() => {
         $q.notify({ type: 'positive', message: 'Kliknuto OK' })
     }).onCancel(() => {

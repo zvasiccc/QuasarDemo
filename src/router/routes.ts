@@ -21,6 +21,10 @@ const routes: RouteRecordRaw[] = [
     path: '/qdialog',
     component: ()=>import('pages/QDialogDemo.vue')
   },
+  {
+    path: '/stilizovanje',
+    component: ()=>import('pages/QuasarStilizovanje.vue')
+  },
 
 ];
 
