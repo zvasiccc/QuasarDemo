@@ -4,11 +4,11 @@
 
         <q-btn label="Dodaj" icon-right="add" color="positive" @click="pokaziPoruku('Dodat novi unos')" />
 
-        <q-btn label="Kontura" color="warning" outline @click="pokaziPoruku('Kliknuta kontura')" />
+        <q-btn label="Kontura" unelevated color="warning" @click="pokaziPoruku('Kliknuta kontura')" />
 
-        <q-btn label="Okruglo" round color="warning" outline @click="pokaziPoruku('Kliknuto okruglo dugme')" />
+        <q-btn label="Okruglo" round color="warning" @click="pokaziPoruku('Kliknuto okruglo dugme')" />
 
-        <q-btn label="Nedostupno" color="negative" disabled />
+        <q-btn label="Nedostupno" color="negative" :disabled="isDisabled" />
 
         <q-btn label="Loading dugme" color="secondary" :loading="dugmeUCekanju" @click="pokreniLoading" />
 
@@ -17,9 +17,8 @@
 
         <q-btn label="Veliko dugme" size="32px" color="secondary" outline
             @click="pokaziPoruku('Kliknuto veliko dugme')" />
-        <q-btn label="Izolovano" class="q-ma-xl" color="primary" @click="pokaziPoruku('Kliknuto izolovano dugme')" />
 
-        <q-btn label="Settings" icon-right="build" color="purple" text-color="red" outline rounded unelevated ripple
+        <q-btn label="Settings" icon-right="build" outline color="purple" text-color="red" rounded unelevated ripple
             size="lg" @click="handleClick()" />
 
     </div>
@@ -32,6 +31,7 @@ import { useQuasar } from 'quasar'
 const $q = useQuasar()
 const dugmeUCekanju = ref(false)
 const preuzimanjeUToku = ref(false);
+const isDisabled = ref(true);
 const progress = ref(0);
 const pokreniPreuzimanje = () => {
 

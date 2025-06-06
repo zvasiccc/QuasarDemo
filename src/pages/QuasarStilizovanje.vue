@@ -4,16 +4,15 @@
         Stilizovanje u quasaru
     </div>
 
-    <div class="row q-col-gutter-md">
+    <div class="row q-col-gutter-xs">
         <div class="col-6">
-            <q-card class="bg-yellow-8 text-black q-pa-xl">
+            <q-card class="bg-blue-2 text-black q-pa-xl">
                 <q-card-section>
                     <div class="text-subtitle1">Kartica sa paddingom</div>
                     <div class="text-caption">Opis kartice sa padingom</div>
                 </q-card-section>
             </q-card>
         </div>
-
         <div class="col-6">
             <q-card class="bg-green-3 text-black q-ma-sm">
                 <q-card-section>

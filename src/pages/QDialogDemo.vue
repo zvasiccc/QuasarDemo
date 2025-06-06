@@ -12,10 +12,10 @@
                     Da li ste sigurni da zelite da nastavite?
                 </q-card-section>
 
-                <q-card-actions align="right">
+                <q-card-section align="right">
                     <q-btn flat label="Otkazi" color="negative" v-close-popup />
                     <q-btn flat label="Potvrdi" color="primary" @click="potvrdiAkciju" />
-                </q-card-actions>
+                </q-card-section>
             </q-card>
         </q-dialog>
     </div>

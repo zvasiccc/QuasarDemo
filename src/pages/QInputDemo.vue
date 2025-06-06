@@ -1,18 +1,18 @@
 <template>
-    <div class="q-pa-md q-gutter-md column" style="max-width: 400px; margin: auto">
+    <div class="q-pa-md q-gutter-md column">
 
         <q-input filled v-model="ime" label="Unesi ime" @blur="prikaziPoruku('Uneseno ime je: ' + ime)" />
 
         <q-input filled v-model="email1" label="Email1" type="email"
-            :rules="[val => val.includes('@') || 'Email mora sadržati @']" />
+            :rules="[val => val.includes('@') || 'Email mora sadrzati @']" />
 
         <q-input filled prepend-icon="email" v-model="email2" label="Email2" hint="Unesite validnu email adresu"
-            :error="imaGresku" error-message="Email mora sadržati znak @" clearable />
+            :error="imaGresku" error-message="Email mora sadrzati znak @" clearable />
 
         <q-input filled v-model.number="godine" type="number" label="Godine"
             :rules="[val => val >= 0 || 'Godine ne mogu biti negativne']" />
 
-        <q-input filled v-model="lozinka" label="Lozinka" :type="vidiLozinku ? 'text' : 'password'">
+        <q-input filled v-model="lozinka" :type="vidiLozinku ? 'text' : 'password'" label="Lozinka">
             <q-icon :name="vidiLozinku ? 'visibility_off' : 'visibility'" @click="vidiLozinku = !vidiLozinku" />
         </q-input>
 
